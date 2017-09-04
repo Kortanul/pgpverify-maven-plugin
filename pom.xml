@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   ~ Copyright 2014 Slawomir Jaranowski
+  ~ Portions Copyright 2017 Wren Security
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
   ~ you may not use this file except in compliance with the License.
@@ -49,20 +50,33 @@
             <email>s.jaranowski@gmail.com</email>
             <timezone>Europe/Warsaw</timezone>
         </developer>
+        <developer>
+            <id>kortanul</id>
+            <name>Kortanul</name>
+            <email>kortanul@protonmail.com</email>
+            <timezone>America/Los_Angeles</timezone>
+        </developer>
     </developers>
 
     <scm>
-        <connection>scm:git:git@github.com:s4u/pgpverify-maven-plugin.git</connection>
+        <connection>scm:git:git@github.com:WrenSecurity/pgpverify-maven-plugin.git</connection>
         <developerConnection>${project.scm.connection}</developerConnection>
-        <url>https://github.com/s4u/pgpverify-maven-plugin</url>
+        <url>https://github.com/WrenSecurity/pgpverify-maven-plugin</url>
         <tag>HEAD</tag>
     </scm>
 
     <distributionManagement>
-        <site>
-            <id>github-pages</id>
-            <url>${project.scm.connection}</url>
-        </site>
+        <snapshotRepository>
+            <id>wrensecurity-snapshots</id>
+            <name>Wren Security Snapshot Repository</name>
+            <url>https://wrensecurity.jfrog.io/wrensecurity/snapshots</url>
+        </snapshotRepository>
+
+        <repository>
+            <id>wrensecurity-releases</id>
+            <name>Wren Security Release Repository</name>
+            <url>https://wrensecurity.jfrog.io/wrensecurity/releases</url>
+        </repository>
     </distributionManagement>
 
     <properties>
